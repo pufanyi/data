@@ -1,0 +1,7 @@
+print("Hello".." ".."--\"World\"--")
+x=-3+4
+this_1s_a_variable = 0xabcF-.012e-56+7.e8+9e+10--8
+if 1 then
+y=x
+end
+print (y)
