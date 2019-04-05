@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+struct Card{
+	string name;
+	int hp,fullHp,dps;
+	void get(){
+		cin>>name>>hp>>fullHp>>dps;
+	}
+};
+struct Gen{
+	string name;
+	Card cards[3];
+	void get(){
+		cin>>name;
+		for(int i=0;i<3;i++)cards[i].get();
+	}
+}own,enemy;
+int a,b,c;
+void go(Gen,Gen,int&,int&,int&);
+int main(){
+	freopen("ai.in","r",stdin);
+	freopen("ai.out","w",stdout);
+	own.get();
+	enemy.get();
+	go(own,enemy,a,b,c);
+	if(a<0)a=0;
+	if(a>2)a=2;
+	if(b<0)b=0;
+	if(b>2)b=2;
+	if(c<0)c=0;
+	if(c>2)c=2;
+	printf("%d %d %d\n",a,b,c);
+	return 0;
+}
